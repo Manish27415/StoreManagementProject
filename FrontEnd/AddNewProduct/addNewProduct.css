@@ -1,0 +1,76 @@
+/* General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+h1 {
+    color: #212529;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+/* Form Styling */
+form {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Prevents overflow */
+}
+
+/* Form Fields */
+form div {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box; /* Ensures content stays inside */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    box-sizing: border-box; /* Keeps input inside the form */
+}
+
+/* Input Focus Effect */
+input:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #218838;
+}

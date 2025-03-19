@@ -1,0 +1,81 @@
+/* Google Font for Modern Look */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1d003b, #1f70fd);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.highlight 
+{
+    color: #ffeb3b;
+}
+
+.icon-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Glassmorphic Cards */
+.icon-card {
+    width: 160px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Effect */
+.icon-card:hover {
+    transform: translateY(-5px);
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+/* Icon Styling */
+.icon-card i {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.icon-card p {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

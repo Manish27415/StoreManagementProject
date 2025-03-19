@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add New Employee</title>
+  <link rel="stylesheet" href="Update.css" />
+</head>
+<body>
+  <h1>Add New Employee</h1>
+
+  <!-- Employee Form -->
+  <form id="employeeForm">
+    <div>
+      <label for="employeeId">Employee ID:</label>
+      <input type="text" id="employeeId" name="employeeId" required />
+    </div>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+    <div>
+      <label for="department">Department:</label>
+      <input type="text" id="department" name="department" required />
+    </div>
+    <div>
+      <label for="employeeSal">Salary:</label>
+      <input type="number" id="employeeSal" name="employeeSal" required />
+    </div>
+    <button type="submit">Add Employee</button>
+  </form>
+
+  <script src="Update.js"></script>
+</body>
+</html>

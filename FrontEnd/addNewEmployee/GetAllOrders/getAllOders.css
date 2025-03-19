@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgb(255, 255, 255);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+#add
+{
+    background-color: #ffffff;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+#add:hover
+{
+    background-color: #333;
+    color: white;
+}
+#del
+{
+    background-color: #ffffff;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+#del:hover
+{
+    background-color: #333;
+    color: white;
+}
+

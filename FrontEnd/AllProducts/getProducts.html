@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="getProducts.css">
+</head>
+
+<body>
+    <h1>PRODUCTS TABLE</h1>
+    <table id="myProduct">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Quantity</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button id="newProduct">Add Products</button>
+    <button id="delProduct">Delete Products</button>
+    <button id="orderProduct">Order Products</button>
+
+    <script>
+        window.onload = async function () 
+        {
+            document.getElementById("newProduct").addEventListener("click", function () 
+            {
+                window.location.href = "../AddNewProduct/addNewProduct.html";
+            });
+
+            document.getElementById("delProduct").addEventListener("click", function () 
+            {
+                window.location.href = "../DeleteProduct/deleteProduct.html";
+            });
+            
+            document.getElementById("orderProduct").addEventListener("click", function () 
+            {
+                window.location.href = "../GetAllOrders/getAllOrders.html";
+            });
+
+            try {
+                let res = await fetch("http://localhost:8080/products/getAllProductDetails");
+                
+                if (res.ok) 
+                {
+                    const products = await res.json();
+                    let table = document.getElementById("myProduct").getElementsByTagName('tbody')[0];
+
+                    products.forEach(pro => {
+                        let newRow = table.insertRow();
+                        newRow.insertCell(0).textContent = pro.productId;
+                        newRow.insertCell(1).textContent = pro.productName;
+                        newRow.insertCell(2).textContent = pro.productPrice;
+                        newRow.insertCell(3).textContent = pro.productQuantity;
+                    });
+                } else 
+                {
+                    alert("Failed to fetch product data.");
+                }
+            } catch (error)
+            {
+                console.error("Error fetching product:", error);
+                alert("Error fetching product data.");
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add New Product</title>
+  <link rel="stylesheet" href="addNewProduct.css" />
+</head>
+<body>
+  <h1>Add New Product</h1>
+
+  <form id="productForm">
+    <div>
+      <label for="productId">Product Id:</label>
+      <input type="text" id="productId" name="productId" required />
+    </div>
+    <div>
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" required />
+    </div>
+    <div>
+      <label for="productPrice">Product Price:</label>
+      <input type="number" id="productPrice" name="productPrice" required min="0" step="0.01" />
+    </div>
+    <div>
+      <label for="productQuantity">Quantity:</label>
+      <input type="number" id="productQuantity" name="productQuantity" required min="1" />
+    </div>
+    <button type="submit">Add Product</button>
+  </form>
+
+  <script src="addNewProduct.js"></script>
+</body>
+</html>

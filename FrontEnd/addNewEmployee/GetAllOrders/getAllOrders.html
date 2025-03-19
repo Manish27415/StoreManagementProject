@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="getAllOders.css">
+</head>
+
+<body>
+    <h1>ORDERS TABLE</h1>
+    <table id="myOrders">
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Product Id</th>
+                <th>Order Quantity</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        window.onload = async function () 
+        {
+            try {
+                let res = await fetch("http://localhost:8080/products/getAllOrders");
+                
+                if (res.ok) 
+                {
+                    const products = await res.json();
+                    let table = document.getElementById("myOrders").getElementsByTagName('tbody')[0];
+
+                    products.forEach(pro => 
+                    {
+                        let newRow = table.insertRow();
+                        newRow.insertCell(0).textContent = pro.orderId;
+                        newRow.insertCell(1).textContent = pro.productId;
+                        newRow.insertCell(2).textContent = pro.orderQuantity;
+                    });
+                } 
+                else 
+                {
+                    alert("Failed to fetch order data.");
+                }
+            } 
+            catch (error)
+            {
+                console.error("Error fetching Orders:", error);
+                alert("Error fetching Orders.");
+            };
+        }
+    </script>
+</body>
+</html>

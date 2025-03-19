@@ -1,0 +1,94 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Full Page Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #fefefe, #ffffff);
+}
+
+/* Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Heading */
+h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+/* Label */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Input Field */
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+/* Input Focus Effect */
+input:focus {
+    border-color: #ff416c;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Submit Button */
+button 
+{
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #ff416c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover 
+{
+    background: #000000;
+    transform: scale(1.05);
+    color: #fefefe;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) 
+{
+    form {
+        width: 90%;
+    }
+}
